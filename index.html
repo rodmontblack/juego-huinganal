@@ -69,6 +69,15 @@
             justify-content: center; /* alinea horizontalmente en el centro */
         }
 
+         /* Agrega estilos para el botón de inicio */
+         #start-button {
+            font-size: 4em;  /* Ajusta el tamaño del texto del botón */
+            display: block;  /* Hace que el botón se muestre como un bloque */
+            width: 100%;  /* Hace que el botón tenga el ancho completo */
+            text-align: center;  /* Centra el texto dentro del botón */
+            margin-top: 20px;  /* Agrega un poco de espacio en la parte superior del botón */
+            margin-bottom: 20px;  /* Agrega un poco de espacio en la parte inferior del botón */
+        }
 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -76,19 +85,18 @@
         $(document).ready(function() {
             let speeds = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 45, 30, 25, 30, 35, 40, 45, 50, 45, 20, 35];
 
-
-            $(document).keydown(function(e) {
-                if (e.which == 13) {  // 13 es el código de la tecla espacio
-                    for(let i = 1; i <= 21; i++) {
-                        let speed = speeds[i - 1];
-                        let $character = $(`#character${i}`);
-                        $character.animate({
-                            left: "100%"
-                        }, speed * 500);
+            // Aquí cambiamos la función de escucha a un click en el botón
+            $("#start-button").click(function() {
+                for(let i = 1; i <= 21; i++) {
+                    let speed = speeds[i - 1];
+                    let $character = $(`#character${i}`);
+                    $character.animate({
+                        left: "100%"
+                    }, speed * 1000);
                     }
                 }
+        );
             });
-        });
     </script>
 </head>
 <body>
@@ -99,7 +107,8 @@
         <div class="game-title">EL JUEGO DEL KINDER A HUINGANAL</div>
         <img src="huinganal.png" alt="Logo">  <!-- Asegúrate de reemplazar "logo.png" con la ubicación de tu archivo de logo -->
     </div>
-
+    <!-- Agrega un botón que se puede hacer clic para comenzar el juego -->
+    <button id="start-button">START</button>
     <!-- Aquí va la meta -->
         <div class="finish-line"></div>
     <div class="race-track">
