@@ -78,7 +78,15 @@
             margin-top: 20px;  /* Agrega un poco de espacio en la parte superior del botón */
             margin-bottom: 20px;  /* Agrega un poco de espacio en la parte inferior del botón */
         }
-
+        /* Estilos para los botones */
+        .button {
+            font-size: 2em;
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -94,8 +102,11 @@
                         left: "100%"
                     }, speed * 1000);
                     }
-                }
-        );
+                });
+            // Reinicio del juego
+            $("#reset-button").click(function() {
+                location.reload();
+            });
             });
     </script>
 </head>
@@ -177,6 +188,9 @@
 
         <img class="character" id="character21" src="character21.png" style="top:1010px"/>
         <div class="track" style="top:1059px"></div> 
+            <!-- Botón para reiniciar el juego -->
+    <button id="reset-button" class="button">Reiniciar</button>
+        
     </div>
 </body>
 </html>
