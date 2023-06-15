@@ -42,7 +42,7 @@
                 /* Estilos para el título del juego */
                 .game-title {
             text-align: center;
-            font-size: 2em;
+            font-size: 5em;
             font-weight: bold;
             margin-bottom: 20px;
                 }
@@ -53,7 +53,7 @@
         }
         /* Estilos para el título del juego */
         .game-title {
-            font-size: 5em;
+            font-size: 3em;
             font-weight: bold;
             margin: 0 20px;  /* Agrega margen a los lados del título */
         }
@@ -87,11 +87,19 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+    
+        .button:last-child {
+            margin-bottom: 0;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            let speeds = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 45, 30, 25, 30, 35, 40, 45, 50, 45, 20, 35];
+            let speeds = [17, 13, 15, 20, 16, 13, 14, 19, 15, 14, 11, 16, 12, 18, 17, 15, 18, 19, 17, 16, 15];
 
             // Aquí cambiamos la función de escucha a un click en el botón
             $("#start-button").click(function() {
@@ -115,7 +123,7 @@
     <div class="header">
         <img src="huinganal.png" alt="Logo">  <!-- Asegúrate de reemplazar "logo.png" con la ubicación de tu archivo de logo -->    
         <!-- Título del juego -->
-        <div class="game-title">MI PRIMER PROGRAMA</div>
+        <div class="game-title">EL JUEGO DEL KINDER A HUINGANAL</div>
         <img src="huinganal.png" alt="Logo">  <!-- Asegúrate de reemplazar "logo.png" con la ubicación de tu archivo de logo -->
     </div>
     <!-- Agrega un botón que se puede hacer clic para comenzar el juego -->
@@ -127,71 +135,51 @@
     <div class="race-track">
         <div class="track" style="top:0px"></div> 
         <img class="character" id="character1" src="character1.png" style="top:10px"/> 
-         <div class="track" style="top:59px"></div> 
-
-        <img class="character" id="character2" src="character2.png" style="top:60px"/> 
-        <div class="track" style="top:109px"></div>
-
-        <img class="character" id="character3" src="character3.png" style="top:110px"/> 
-        <div class="track" style="top:159px"></div>
-
-        <img class="character" id="character4" src="character4.png" style="top:160px"/> 
-        <div class="track" style="top:209px"></div>
-
-         <img class="character" id="character5" src="character5.png" style="top:210px"/> 
-        <div class="track" style="top:259px"></div>
-
-        <img class="character" id="character6" src="character6.png" style="top:260px"/> 
-        <div class="track" style="top:309px"></div>
-
-        <img class="character" id="character7" src="character7.png" style="top:310px"/> 
-        <div class="track" style="top:359px"></div>
-
-        <img class="character" id="character8" src="character8.png" style="top:360px"/> 
-        <div class="track" style="top:409px"></div>
-
-        <img class="character" id="character9" src="character9.png" style="top:410px"/> 
-        <div class="track" style="top:459px"></div>
-
-        <img class="character" id="character10" src="character10.png" style="top:460px"/> 
-        <div class="track" style="top:509px"></div>
-
-        <img class="character" id="character11" src="character11.png" style="top:510px"/> 
-        <div class="track" style="top:559px"></div>
-
-        <img class="character" id="character12" src="character12.png" style="top:560px"/> 
-        <div class="track" style="top:609px"></div>
-
-        <img class="character" id="character13" src="character13.png" style="top:610px"/> 
-        <div class="track" style="top:659px"></div>
-
-        <img class="character" id="character14" src="character14.png" style="top:660px"/> 
-        <div class="track" style="top:709px"></div>
-
-        <img class="character" id="character15" src="character15.png" style="top:710px"/> 
-        <div class="track" style="top:759px"></div>
-
-        <img class="character" id="character16" src="character16.png" style="top:760px"/> 
-        <div class="track" style="top:809px"></div>
-
+        <img class="character" id="character2" src="character2.png" style="top:60px"/>
+        <img class="character" id="character3" src="character3.png" style="top:110px"/>
+        <img class="character" id="character4" src="character4.png" style="top:160px"/>
+        <img class="character" id="character5" src="character5.png" style="top:210px"/>
+        <img class="character" id="character6" src="character6.png" style="top:260px"/>
+        <img class="character" id="character7" src="character7.png" style="top:310px"/>
+        <img class="character" id="character8" src="character8.png" style="top:360px"/>
+        <img class="character" id="character9" src="character9.png" style="top:410px"/>
+        <img class="character" id="character10" src="character10.png" style="top:460px"/>
+        <img class="character" id="character11" src="character11.png" style="top:510px"/>
+        <img class="character" id="character12" src="character12.png" style="top:560px"/>
+        <img class="character" id="character13" src="character13.png" style="top:610px"/>
+        <img class="character" id="character14" src="character14.png" style="top:660px"/>
+        <img class="character" id="character15" src="character15.png" style="top:710px"/>
+        <img class="character" id="character16" src="character16.png" style="top:760px"/>
         <img class="character" id="character17" src="character17.png" style="top:810px"/>
-        <div class="track" style="top:859px"></div>
-
         <img class="character" id="character18" src="character18.png" style="top:860px"/>
-        <div class="track" style="top:909px"></div>
-
         <img class="character" id="character19" src="character19.png" style="top:910px"/>
-        <div class="track" style="top:959px"></div>
-
         <img class="character" id="character20" src="character20.png" style="top:960px"/>
-        <div class="track" style="top:1009px"></div>
-
-        <img class="character" id="character21" src="character21.png" style="top:1010px"/>
+        <img class="character" id="character21" src="character21.png" style="top:1010px"/> 
+        <div class="track" style="top:59px"></div>      
+        <div class="track" style="top:109px"></div>        
+        <div class="track" style="top:159px"></div>         
+        <div class="track" style="top:209px"></div>          
+        <div class="track" style="top:259px"></div>         
+        <div class="track" style="top:309px"></div>         
+        <div class="track" style="top:359px"></div>         
+        <div class="track" style="top:409px"></div>         
+        <div class="track" style="top:459px"></div>         
+        <div class="track" style="top:509px"></div>         
+        <div class="track" style="top:559px"></div>         
+        <div class="track" style="top:609px"></div>        
+        <div class="track" style="top:659px"></div>        
+        <div class="track" style="top:709px"></div>         
+        <div class="track" style="top:759px"></div>         
+        <div class="track" style="top:809px"></div>        
+        <div class="track" style="top:859px"></div>        
+        <div class="track" style="top:909px"></div>        
+        <div class="track" style="top:959px"></div>        
+        <div class="track" style="top:1009px"></div>        
         <div class="track" style="top:1059px"></div> 
-         </div>
-            <!-- Botón para reiniciar el juego -->
+    </div>
+        <!-- Botón para reiniciar el juego -->
     <button id="reset-button" class="button">REINICIAR</button>
         
-   
+    
 </body>
 </html>
